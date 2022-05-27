@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" type="text/css">
- </head>
+  <script defer="true" type="text/javascript" src="js/main.js"></script>
+</head>
 <body>
 
 <h1 id="title">Anthony's Amazing Adventure</h1>
-<p id="intro">One day, Anthony was mindlessly walking on the street when he was suddenly strangled by bandits and held captive in a mysterious prison. The bandits keep watch of him in the daytime, but at night the bandits leave to strangle other people. 
-<br/>
-Your job is to get Anthony out of the prison before daybreak.
-</p>
+<div id="intro">
+  <p id="intro-text">
+    One day, Anthony was mindlessly walking on the street when he was suddenly strangled by bandits and held captive in a mysterious prison. The bandits keep watch of him in the daytime, but at night the bandits leave to strangle other people. 
+    <br>
+    Your job is to get Anthony out of the prison before daybreak.
+  </p>
+</div>
+
+<div id="intro2" style="display: none">
+  <p id="intro2-text">
+    Keep track of how much time you are taking to complete the entire mission. <br>
+    Try to complete it as fast as possible, as it will determine Anthony’s fate! You can also do it at your own pace, and see if you can escape. 
+  </p>
+</div>
+<button class="continue" onclick="next()">Continue</button>
+
 
 </body>
 </html>
