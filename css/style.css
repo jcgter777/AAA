@@ -4,16 +4,20 @@
 
 body {
     margin: 50px;
+    background: whitesmoke;
 }
 
 h1 {
     text-align: center;
     font-variant: small-caps;
     font-size: 45px;
+    background: #7DF9FF;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 div {
-    border: 3px gray solid;
+    border: 3px cyan groove;
     border-radius: 5px;
     padding: 15px;
     font-size: 17px;
@@ -25,6 +29,7 @@ div {
     width: -webkit-fill-available;
     height: 50px;
     background: lightgreen;
+    font-size: 20px;
 }
 
 #continue:hover {

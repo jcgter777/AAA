@@ -2,7 +2,7 @@ var current = 0
 const divs = [
     "intro1",
     "intro2",
-    "puzzle1",
+    "puzzle1.1",
 ]
 function next() {
     if (current == divs.length-1)
