@@ -1,7 +1,8 @@
 var current = 0
 const divs = [
-    "intro",
-    "intro2"
+    "intro1",
+    "intro2",
+    "puzzle1",
 ]
 function next() {
     if (current == divs.length-1)

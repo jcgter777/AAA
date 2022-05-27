@@ -1,3 +1,33 @@
 * {
     font-family: 'Ubuntu', sans-serif;
 }
+
+body {
+    margin: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 45px;
+}
+
+div {
+    border: 3px gray solid;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 17px;
+}
+
+#continue {
+    margin: 20px;
+    border-radius: 15px;
+    width: -webkit-fill-available;
+    height: 50px;
+    background: lightgreen;
+}
+
+#continue:hover {
+    cursor: pointer;
+    background: #7CFC00;
+}
