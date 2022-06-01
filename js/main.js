@@ -44,3 +44,35 @@ function elevFail() {
 function elevLock() {
     document.getElementById("elevError").remove()
 }
+
+function getInput() {
+    document.addEventListener('keydown',typeInCells()); 
+}
+function typeInCells(){
+    //cells of grid and index of box to type letter
+    let cells = document.getElementById('passInput').children;
+    let i = -1;
+    
+    //Checks if letter or number
+    let isAlpha = (ch) =>{
+      if(ch === undefined || ch === null || ch.length > 1){
+        return false;
+      }
+      return (/[a-zA-Z1-9]/).test(ch);
+    }  
+    
+    //Event Listener when keys are pressed
+    return event => {
+      if(event.key === "Backspace"){
+        if(i > -1){
+          cells[i].innerHTML = "";
+          i--;
+        }
+      } else if(isAlpha(event.key) && i < cells.length - 1){
+        i++;
+        cells[i].innerHTML = event.key.toUpperCase(); 
+      }
+    }
+  }
+  
+  
