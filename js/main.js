@@ -4,6 +4,7 @@ const divs = [
     "intro2",
     "puzzle1",
     "open1",
+    "puzzle2"
 ]
 function next() {
     if (current == divs.length-1)
