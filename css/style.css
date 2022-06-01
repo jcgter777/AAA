@@ -12,12 +12,13 @@ h1 {
     font-variant: small-caps;
     font-size: 45px;
     background: #7DF9FF;
+    border: 3px #7DF9FF inset;
     border-radius: 5px;
     padding: 10px;
 }
 
-div {
-    border: 3px cyan groove;
+.panel {
+    border: 3px cyan inset;
     border-radius: 5px;
     padding: 15px;
     font-size: 17px;
@@ -25,6 +26,7 @@ div {
 
 #continue {
     margin: 20px;
+    border: 2px lightgreen inset;
     border-radius: 15px;
     width: -webkit-fill-available;
     height: 50px;
@@ -35,4 +37,40 @@ div {
 #continue:hover {
     cursor: pointer;
     background: #7CFC00;
+}
+
+.elevator {
+    width: 200px;
+}
+
+.eLabel {
+    display: inline-block;
+    margin-left: 65px;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.elevClose {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.elevClose:hover {
+  color: black;
+}
+
+#elevSucc {
+    background-color: #7CFC00;
+    color: black;
 }

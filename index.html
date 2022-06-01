@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Anthony's Adventure</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="js/main.js"></script>
@@ -8,7 +9,7 @@
 <body>
 
 <h1 id="title">Anthony's Amazing Adventure</h1>
-<div id="intro1">
+<div id="intro1" class="panel">
   <p>
     One day, Anthony was mindlessly walking on the street when he was suddenly strangled by bandits and held captive in a mysterious prison. The bandits keep watch of him in the daytime, but at night the bandits leave to strangle other people. 
     <br>
@@ -16,14 +17,14 @@
   </p>
 </div>
 
-<div id="intro2" style="display: none">
+<div id="intro2" style="display: none" class="panel">
   <p id="intro2-text">
     Keep track of how much time you are taking to complete the entire mission. <br>
-    Try to complete it as fast as possible, as it will determine Anthony&aposs fate! You can also do it at your own pace, and see if you can escape. 
+    Try to complete it as fast as possible, as it will determine Anthony's fate! You can also do it at your own pace, and see if you can escape. 
   </p>
 </div>
 
-<div id="puzzle1.1" style="display: none">
+<div id="puzzle1" class="locked panel" style="display: none" >
   <p>
     Anthony awakes from deep slumber and wanders out of his cell just to find three elevators. Last time he checked, he was roughly 54 kg.  Each elevator is held by different ropes and has different masses, but they are currently held at rest:
     <ul>
@@ -32,8 +33,30 @@
       <li>When moving, Elevator 3 has a mass of 1130 kg and has a force tension of 11000 N.</li>
     </ul>
   </p>
+  <div id="elevatorBar">
+    <div id="elevError" class="alert" style="display: none">
+      <span class="elevClose" onclick="this.parentElement.style.display='none';">&times;</span>
+      Incorrect elevator. Please try again!
+    </div>
+    <div id="elevSucc" class="alert" style="display: none">
+      Correct! Press 'Continue' to proceed.
+    </div>
+    <div id="eLabelBar">
+      <h2 class="eLabel">Elevator 1</h2><h2 class="eLabel">Elevator 2</h2><h2 class="eLabel">Elevator 3</h2>
+    </div>
+    <div id="eImageBar">
+      <img id="e1" class="elevator" src="img/elevator.jpeg" onclick="elev1()"/><img id="e2" class="elevator" src="img/elevator.jpeg" onclick="elev2()"/><img id="e3" class="elevator" src="img/elevator.jpeg" onclick="elev3()"/>
+    </div>
+  </div>
 
+  <p>
+    Anthony needs to go up the building to get to his destination. Please calculate which elevator will allow him to do so, and click on the one you find to be correct. 
+  </p>
 </div>
+<div id="open1" class = "panel" style="display: none">
+  <p>Please find the yellow envelope and open it to proceed.</p>
+</div>
+
 <button id="continue" onclick="next()">Continue</button>
 
 
