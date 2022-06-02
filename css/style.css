@@ -43,6 +43,10 @@ h1 {
   justify-content: center;
 }
 
+#continueBar:hover {
+	
+	transform: translateY(-3px);
+}
 #continue {
     margin: 20px;
 	border: none;
@@ -58,17 +62,16 @@ h1 {
 	transition: transform 0.2s ease 0s;
     color: white;
 	-webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+	box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
 #continue:hover {
     cursor: pointer;
+	box-shadow: 0px 20px 20px rgb(204, 255, 255);
     background: linear-gradient(90deg, rgba(59,203,255,1) 0%, rgba(14,230,0,1) 33%, rgba(59,203,255,1) 66%,  rgba(14,230,0,1) 100%);
     background-size: 400% 400%;
     animation: gradient 3s ease infinite;
-	box-shadow: 0px 20px 20px rgb(204, 255, 255);
-	transform: translateY(-3px);
 }
 
 @keyframes gradient {
@@ -128,6 +131,7 @@ h1 {
     width: -webkit-fill-available;
     justify-content: center;
     gap: 10px;
+	margin-bottom: 50px;
 }
 
 .charBox {

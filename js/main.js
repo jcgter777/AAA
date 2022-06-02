@@ -48,6 +48,10 @@ function elevLock() {
     document.getElementById("elevError").remove()
 }
 
+function getInput(){
+    document.addEventListener('keydown',typeInCells());
+}
+
 function typeInCells(){
     //cells of grid and index of box to type letter
     let cells = document.getElementById('passInput').children
