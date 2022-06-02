@@ -2,41 +2,85 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+html { 
+  background: url("../img/TriTess.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
     margin: 50px;
-    background: whitesmoke;
 }
 
 h1 {
     text-align: center;
     font-variant: small-caps;
     font-size: 45px;
-    background: #7DF9FF;
-    border: 3px #7DF9FF inset;
+    background: linear-gradient(90deg, rgba(0,41,230,1) 0%, rgba(59,203,255,1) 25%, rgba(211,144,242,1) 75%, rgba(98,94,255,1) 100%);
+	animation: gradient 10s ease infinite;
+	background-size: 400% 400%;
+	border: none;
     border-radius: 5px;
     padding: 10px;
+    color: white;
 }
 
 .panel {
-    border: 3px cyan inset;
+    border: 3px rgba(88,88,88,.50) inset;
     border-radius: 5px;
-    padding: 15px;
-    font-size: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    background: radial-gradient(circle, rgba(0,0,0,.75) 0%, rgba(88,88,88,.75) 75%);
+    color: whitesmoke;
+    line-height: 30px;
+}
+
+#continueBar {
+  display: flex;
+  justify-content: center;
 }
 
 #continue {
     margin: 20px;
-    border: 2px lightgreen inset;
+	border: none;
     border-radius: 15px;
-    width: -webkit-fill-available;
-    height: 50px;
-    background: lightgreen;
-    font-size: 20px;
+    width: 500px;
+    height: 60px;
+    background: linear-gradient(90deg, rgba(14,230,0,1) 0%, rgba(59,203,255,1) 33%, rgba(14,230,0,1) 66%, rgba(59,203,255,1) 100%);
+    font-size: 26px;
+    background-size: 400% 400%;
+    font-variant: small-caps;
+    animation: gradient 3s ease infinite;
+    letter-spacing: 5px;
+	transition: transform 0.2s ease 0s;
+    color: white;
+	-webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
 #continue:hover {
     cursor: pointer;
-    background: #7CFC00;
+    background: linear-gradient(90deg, rgba(59,203,255,1) 0%, rgba(14,230,0,1) 33%, rgba(59,203,255,1) 66%,  rgba(14,230,0,1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+	box-shadow: 0px 20px 20px rgb(204, 255, 255);
+	transform: translateY(-3px);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .elevator {
@@ -75,6 +119,10 @@ h1 {
     color: black;
 }
 
+#ywEnvelope {
+  height: 300px;
+}
+
 #passInput {
     display: flex;
     width: -webkit-fill-available;
@@ -91,5 +139,6 @@ h1 {
     align-items: center;
     font-size: 45px;
     border-radius: 10px;
-    border: 5px gray inset;
+    background: radial-gradient(circle, rgba(25,25,25,1) 15%, rgba(255,255,255,1) 100%);
+    border: 5px whitesmoke inset;
 }

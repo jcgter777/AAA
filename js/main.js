@@ -1,5 +1,6 @@
 var current = 0
 const divs = [
+    "directions",
     "intro1",
     "intro2",
     "puzzle1",
@@ -74,7 +75,7 @@ function typeInCells(){
             string+=char
             cells[i].innerHTML = char
         }
-        
+
         if (string === "FORCE") {
             document.getElementById("continue").style.display = "block"
             document.removeEventListener('keydown', handler)
