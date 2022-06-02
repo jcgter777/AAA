@@ -6,6 +6,8 @@ const divs = [
     "open1",
     "puzzle2"
 ]
+
+document.addEventListener('keydown',typeInCells());
 function next() {
     if (current == divs.length-1)
         return
@@ -45,34 +47,37 @@ function elevLock() {
     document.getElementById("elevError").remove()
 }
 
-function getInput() {
-    document.addEventListener('keydown',typeInCells()); 
-}
 function typeInCells(){
     //cells of grid and index of box to type letter
-    let cells = document.getElementById('passInput').children;
-    let i = -1;
-    
+    let cells = document.getElementById('passInput').children
+    let i = -1
+    let string = ""
     //Checks if letter or number
     let isAlpha = (ch) =>{
-      if(ch === undefined || ch === null || ch.length > 1){
-        return false;
-      }
-      return (/[a-zA-Z1-9]/).test(ch);
+        if(ch === undefined || ch === null || ch.length > 1)
+            return false
+
+      return (/[a-zA-Z1-9]/).test(ch)
     }  
     
     //Event Listener when keys are pressed
-    return event => {
-      if(event.key === "Backspace"){
-        if(i > -1){
-          cells[i].innerHTML = "";
-          i--;
+    return function handler(event) {
+        if(event.key === "Backspace"){
+            if(i > -1){
+                cells[i].innerHTML = ""
+                i--
+                string = string.substring(0, string.length-1)
+            }
+        } else if(isAlpha(event.key) && i < cells.length - 1){
+            i++
+            let char = event.key.toUpperCase()
+            string+=char
+            cells[i].innerHTML = char
         }
-      } else if(isAlpha(event.key) && i < cells.length - 1){
-        i++;
-        cells[i].innerHTML = event.key.toUpperCase(); 
-      }
+        
+        if (string === "FORCE") {
+            document.getElementById("continue").style.display = "block"
+            document.removeEventListener('keydown', handler)
+        }
     }
-  }
-  
-  
+}
