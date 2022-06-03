@@ -80,7 +80,7 @@ function typeInCells(){
             cells[i].innerHTML = char
         }
 
-        if (string === "FORCE") {
+        if (string === "FORCE" && document.getElementById("puzzle2").style==="block") {
             document.getElementById("continue").style.display = "block"
             document.removeEventListener('keydown', handler)
         }
