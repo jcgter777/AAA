@@ -67,22 +67,24 @@ function typeInCells(){
     
     //Event Listener when keys are pressed
     return function handler(event) {
-        if(event.key === "Backspace"){
-            if(i > -1){
-                cells[i].innerHTML = ""
-                i--
-                string = string.substring(0, string.length-1)
+        if(document.getElementById("puzzle2").style === "block"){
+            if(event.key === "Backspace"){
+                if(i > -1){
+                    cells[i].innerHTML = ""
+                    i--
+                    string = string.substring(0, string.length-1)
+                }
+            } else if(isAlpha(event.key) && i < cells.length - 1){
+                i++
+                let char = event.key.toUpperCase()
+                string+=char
+                cells[i].innerHTML = char
             }
-        } else if(isAlpha(event.key) && i < cells.length - 1){
-            i++
-            let char = event.key.toUpperCase()
-            string+=char
-            cells[i].innerHTML = char
-        }
 
-        if (string === "FORCE" && document.getElementById("puzzle2").style==="block") {
-            document.getElementById("continue").style.display = "block"
-            document.removeEventListener('keydown', handler)
+            if (string === "FORCE") {
+                document.getElementById("continue").style.display = "block"
+                document.removeEventListener('keydown', handler)
+            }
         }
     }
 }
