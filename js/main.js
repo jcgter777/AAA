@@ -9,7 +9,7 @@ const divs = [
     "open2",
     "puzzle3",
     "puzzle4",
-    
+
 ]
 
 document.addEventListener('keydown',typeInCells());
@@ -35,7 +35,7 @@ function elev2() {
         return
     document.getElementById("continue").style.display = "block"
     document.getElementById("elevSucc").style.display = "block"
-    elevLock()
+    document.getElementById("elevError").remove()
 }
 
 function elev3() {
@@ -46,10 +46,6 @@ function elevFail() {
     let bar = document.getElementById("elevError")
     if (bar != null)
         bar.style.display = "block"
-}
-
-function elevLock() {
-    document.getElementById("elevError").remove()
 }
 
 function getInput(){
