@@ -67,7 +67,7 @@ function typeInCells(){
     
     //Event Listener when keys are pressed
     return function handler(event) {
-        if(document.getElementById("puzzle2").style === "block"){
+        if(document.getElementById("puzzle2").style.display === 'block'){
             if(event.key === "Backspace"){
                 if(i > -1){
                     cells[i].innerHTML = ""
