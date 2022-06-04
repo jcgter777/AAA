@@ -1,6 +1,6 @@
 let current = 0
 const panels = document.getElementById("allPanels").children
-
+const cont = document.getElementById("continue")
 document.addEventListener('keydown',typeInCells());
 
 for (let i = 1; i < panels.length; i++) {
@@ -14,7 +14,7 @@ function next() {
     panels[current].style.display = "block"
 
     if (panels[current].classList.contains("locked")) {
-        document.getElementById("continue").style.display = "none"
+        cont.style.display = "none"
     }
 }
 
@@ -25,7 +25,7 @@ function elev1() {
 function elev2() {
     if (document.getElementById("elevSucc").style.display === "block")
         return
-    document.getElementById("continue").style.display = "block"
+    cont.style.display = "block"
     document.getElementById("elevSucc").style.display = "block"
     document.getElementById("elevError").remove()
 }
@@ -74,9 +74,32 @@ function typeInCells(){
             }
 
             if (string === "FORCE") {
-                document.getElementById("continue").style.display = "block"
+                cont.style.display = "block"
                 document.removeEventListener('keydown', handler)
             }
         }
+    }
+}
+
+const input3 = document.getElementById("puzzle3").children
+const ans3 = [1, 2, 3]
+// const ans3 = [7193396, 9411920, 69420]
+let currentQ = 0
+function check(x) {
+    if(event.key === 'Enter') {
+
+        if (+x.value === ans3[currentQ]) {
+            if (currentQ===2) {
+                input3[2].disabled = true
+                cont.style.display = "block"
+            }
+            else {
+                input3[currentQ].style.display = "none"
+                currentQ++
+                input3[currentQ].style.display = "block"
+                input3[currentQ].focus()
+            }
+        }
+
     }
 }
