@@ -9,98 +9,99 @@
 <body>
 
 <h1 id="title">Anthony's Amazing Adventure</h1>
-<div id="directions" class="panel">
-  <p>
-    <div style="text-align: center"><h3>Welcome to <b>Anthony's Amazing adventure!</b></h3></div>
-    <br>
-    To play the game, you need both the escape-room crate and this website. The website is used to facilitate the introduction and evaluation of clues and solutions. At each panel, read the instructions carefully, and when done, press continue. On some panels, the continue button won't appear until you complete a puzzle or enter a code. It will give you the instructions to move on, and you must complete the steps to proceed.
-    <br>
-    When you are done reading the directions, please press continue.
-  </p>
-</div>
-<div id="intro1" class="panel" style="display: none">
-  <p>
-    On a hot summer day, Anthony decided to go to a physics themed amusement park to have some fun. All of a sudden, he realized he forgot to finish his physics homework due the next morning! However, getting out is not so easy. The physics amusement park requires various steps that need to be taken in order to leave (it is an educational experience, after all).   
-    <br>
-    Help get Anthony out of the amusement park as soon as he can!
-  </p>
-</div>
+<div id="allPanels">
+  <div id="directions" class="panel">
+    <p>
+      <div style="text-align: center"><h3>Welcome to <b>Anthony's Amazing adventure!</b></h3></div>
+      <br>
+      To play the game, you need both the escape-room crate and this website. The website is used to facilitate the introduction and evaluation of clues and solutions. At each panel, read the instructions carefully, and when done, press continue. On some panels, the continue button won't appear until you complete a puzzle or enter a code. It will give you the instructions to move on, and you must complete the steps to proceed.
+      <br>
+      When you are done reading the directions, please press continue.
+    </p>
+  </div>
+  <div id="intro1" class="panel" style="display: none">
+    <p>
+      On a hot summer day, Anthony decided to go to a physics themed amusement park to have some fun. All of a sudden, he realized he forgot to finish his physics homework due the next morning! However, getting out is not so easy. The physics amusement park requires various steps that need to be taken in order to leave (it is an educational experience, after all).   
+      <br>
+      Help get Anthony out of the amusement park as soon as he can!
+    </p>
+  </div>
 
-<div id="intro2" class="panel" style="display: none">
-  <p id="intro2-text">
-    Keep track of how much time you are taking to complete the entire mission. <br>
-    Try to complete it as fast as possible, as it will determine Anthony's fate! You can also do it at your own pace, and see if you can escape. 
-  </p>
-</div>
+  <div id="intro2" class="panel" style="display: none">
+    <p id="intro2-text">
+      Keep track of how much time you are taking to complete the entire mission. <br>
+      Try to complete it as fast as possible, as it will determine Anthony's fate! You can also do it at your own pace, and see if you can escape. 
+    </p>
+  </div>
 
-<div id="puzzle1" class="locked panel" style="display: none" >
-  <p>
-    Anthony comes upon his homework dilemma while in the gift shop’s second floor, shopping for Mrs. Smedberg. He needs to get to the first floor. The last time he checked, he was roughly 54 kg.  Each elevator is held by different ropes and has different masses, but right now, they are held at rest:
-    <ul>
-      <li>When moving, Elevator 1 has a mass of 980 kg and has a force tension of 10350 N.</li>
-      <li>When moving, Elevator 2 has a mass of 1000 kg and has a force tension of 12121 N.</li>
-      <li>When moving, Elevator 3 has a mass of 1130 kg and has a force tension of 11840 N.</li>
-    </ul>
-  </p>
-  <div id="elevatorBar">
-    <div id="elevError" class="alert" style="display: none">
-      <span class="elevClose" onclick="this.parentElement.style.display='none';">&times;</span>
-      Incorrect elevator. Please try again!
+  <div id="puzzle1" class="locked panel" style="display: none" >
+    <p>
+      Anthony comes upon his homework dilemma while in the gift shop’s second floor, shopping for Mrs. Smedberg. He needs to get to the first floor. The last time he checked, he was roughly 54 kg.  Each elevator is held by different ropes and has different masses, but right now, they are held at rest:
+      <ul>
+        <li>When moving, Elevator 1 has a mass of 980 kg and has a force tension of 10350 N.</li>
+        <li>When moving, Elevator 2 has a mass of 1000 kg and has a force tension of 12121 N.</li>
+        <li>When moving, Elevator 3 has a mass of 1130 kg and has a force tension of 11840 N.</li>
+      </ul>
+    </p>
+    <div id="elevatorBar">
+      <div id="elevError" class="alert" style="display: none">
+        <span class="elevClose" onclick="this.parentElement.style.display='none';">&times;</span>
+        Incorrect elevator. Please try again!
+      </div>
+      <div id="elevSucc" class="alert" style="display: none">
+        Correct! Press 'Continue' to proceed.
+      </div>
+      <div id="eLabelBar">
+        <h2 class="eLabel">Elevator 1</h2><h2 class="eLabel">Elevator 2</h2><h2 class="eLabel">Elevator 3</h2>
+      </div>
+      <div id="eImageBar">
+        <img id="e1" class="elevator" src="img/elevator.jpeg" onclick="elev1()"/><img id="e2" class="elevator" src="img/elevator.jpeg" onclick="elev2()"/><img id="e3" class="elevator" src="img/elevator.jpeg" onclick="elev3()"/>
+      </div>
     </div>
-    <div id="elevSucc" class="alert" style="display: none">
-      Correct! Press 'Continue' to proceed.
-    </div>
-    <div id="eLabelBar">
-      <h2 class="eLabel">Elevator 1</h2><h2 class="eLabel">Elevator 2</h2><h2 class="eLabel">Elevator 3</h2>
-    </div>
-    <div id="eImageBar">
-      <img id="e1" class="elevator" src="img/elevator.jpeg" onclick="elev1()"/><img id="e2" class="elevator" src="img/elevator.jpeg" onclick="elev2()"/><img id="e3" class="elevator" src="img/elevator.jpeg" onclick="elev3()"/>
+
+    <p>
+      Pick the elevator that will allow Anthony to accelerate downwards.  Please calculate which elevator will allow him to do so, and click on the one you find to be correct. 
+    </p>
+  </div>
+  <div id="open1" class="panel" style="display: none">
+    <p>A blue gift box appears in front of him. Please open it to proceed.</p>
+    <img class="open" src="img/blueBox.png"/>
+  </div>
+
+  <div id="puzzle2" class="locked panel" style="display: none">
+    <p>After going down the elevator, Anthony encounters a labyrinth. There are letters scattered throughout. The letters found on the correct route can be used to crack the five-letter code on the door that leads to his next obstacle
+    <label for="passInput">Type Code Here: </label>
+    <div id="passInput">
+      <div class="charBox"></div>
+      <div class="charBox"></div>
+      <div class="charBox"></div>
+      <div class="charBox"></div>
+      <div class="charBox"></div>
     </div>
   </div>
 
-  <p>
-    Pick the elevator that will allow Anthony to accelerate downwards.  Please calculate which elevator will allow him to do so, and click on the one you find to be correct. 
-  </p>
-</div>
-<div id="open1" class="panel" style="display: none">
-  <p>A blue gift box appears in front of him. Please open it to proceed.</p>
-  <img class="open" src="img/blueBox.png"/>
-</div>
-
-<div id="puzzle2" class="locked panel" style="display: none">
-  <p>After going down the elevator, Anthony encounters a labyrinth. There are letters scattered throughout. The letters found on the correct route can be used to crack the five-letter code on the door that leads to his next obstacle
-  <label for="passInput">Type Code Here: </label>
-  <div id="passInput">
-    <div class="charBox"></div>
-    <div class="charBox"></div>
-    <div class="charBox"></div>
-    <div class="charBox"></div>
-    <div class="charBox"></div>
+  <div id="open2" class="panel" style="display: none">
+    <p>A yellow envelope appears in front of him. Please open it to proceed.</p>
+    <img class="open" src="img/ywEnvelope.png"/>
   </div>
+
+  <div id="puzzle3" class="locked panel" style="display: none">
+    <p>After opening the door, Anthony finds himself stuck in a roller coaster cart on a track. The track is a loop, but before it loops around, there are codes he can enter to exit the loop and bring him to a possible exit. The cart is <b>436 kg</b>. Anthony is <b>54 kg. g = 9.8 m/s<sup>2</sup></b></p>
+    <ol>
+      <li>Find the potential energy of the cart at point A when it is 1498 m above the ground.</li>
+      <li>The cart approaches point B at a velocity of 196 m/s. Find the kinetic energy of the cart at point B.</li>
+      <li>Find the normal force at Point C (top of the loop de loop).</li>
+    </ol>
+  </div>
+
+  <div id="puzzle4" class="locked panel" style="display: none">
+    <p>After the cart finally leaves the rollercoaster-like track, it enters a horizontal track and slows to a rest.<br>
+    A defective roller coaster hits Anthony’s cart with a force of 300N and moves the cart off the track, 178 meters to the right. Find the work done.
+    </p>
+  </div>
+
+
 </div>
-
-<div id="open2" class="panel" style="display: none">
-  <p>A yellow envelope appears in front of him. Please open it to proceed.</p>
-  <img class="open" src="img/ywEnvelope.png"/>
-</div>
-
-<div id="puzzle3" class="locked panel" style="display: none">
-  <p>After opening the door, Anthony finds himself stuck in a roller coaster cart on a track. The track is a loop, but before it loops around, there are codes he can enter to exit the loop and bring him to a possible exit. The cart is <b>436 kg</b>. Anthony is <b>54 kg. g = 9.8 m/s<sup>2</sup></b></p>
-  <ol>
-    <li>Find the potential energy of the cart at point A when it is 1498 m above the ground.</li>
-    <li>The cart approaches point B at a velocity of 196 m/s. Find the kinetic energy of the cart at point B.</li>
-    <li>Find the normal force at Point C (top of the loop de loop).</li>
-  </ol>
-</div>
-
-<div id="puzzle4" class="locked panel" style="display: none">
-  <p>After the cart finally leaves the rollercoaster-like track, it enters a horizontal track and slows to a rest.<br>
-  A defective roller coaster hits Anthony’s cart with a force of 300N and moves the cart off the track, 178 meters to the right. Find the work done.
-  </p>
-</div>
-
-
-
 <div id="continueBar">
   <button id="continue" onclick="next()">Continue</button>
 </div>

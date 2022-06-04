@@ -1,27 +1,16 @@
-var current = 0
-const divs = [
-    "directions",
-    "intro1",
-    "intro2",
-    "puzzle1",
-    "open1",
-    "puzzle2",
-    "open2",
-    "puzzle3",
-    "puzzle4",
-
-]
+let current = 0
+const panels = document.getElementById("allPanels").children
 
 document.addEventListener('keydown',typeInCells());
-function next() {
-    if (current == divs.length-1)
-        return
-    document.getElementById(divs[current]).style.display = "none"
-    current++
-    document.getElementById(divs[current]).style.display = "block"
 
-    let div = document.getElementById(divs[current])
-    if (div.classList.contains("locked")) {
+function next() {
+    if (current == panels.length-1)
+        return
+    panels[current].style.display = "none"
+    current++
+    panels[current].style.display = "block"
+
+    if (panels[current].classList.contains("locked")) {
         document.getElementById("continue").style.display = "none"
     }
 }
