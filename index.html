@@ -62,14 +62,14 @@
     Pick the elevator that will allow Anthony to accelerate downwards.  Please calculate which elevator will allow him to do so, and click on the one you find to be correct. 
   </p>
 </div>
-<div id="open1" class = "panel" style="display: none">
+<div id="open1" class="panel" style="display: none">
   <p>A blue gift box appears in front of him. Please open it to proceed.</p>
-  <img id="ywEnvelope" src="img/ywEnvelope.png"/>
+  <img class="open" src="img/blueBox.png"/>
 </div>
 
-<div id="puzzle2" class = "locked panel" style="display: none">
-  <p>Please type the code in all caps.</p>
-  <label for="passInput">Input Code Here: </label>
+<div id="puzzle2" class="locked panel" style="display: none">
+  <p>After going down the elevator, Anthony encounters a labyrinth. There are letters scattered throughout. The letters found on the correct route can be used to crack the five-letter code on the door that leads to his next obstacle
+  <label for="passInput">Type Code Here: </label>
   <div id="passInput">
     <div class="charBox"></div>
     <div class="charBox"></div>
@@ -78,6 +78,29 @@
     <div class="charBox"></div>
   </div>
 </div>
+
+<div id="open2" class="panel" style="display: none">
+  <p>A yellow envelope appears in front of him. Please open it to proceed.</p>
+  <img class="open" src="img/ywEnvelope.png"/>
+</div>
+
+<div id="puzzle3" class="locked panel" style="display: none">
+  <p>After opening the door, Anthony finds himself stuck in a roller coaster cart on a track. The track is a loop, but before it loops around, there are codes he can enter to exit the loop and bring him to a possible exit. The cart is <b>436 kg</b>. Anthony is <b>54 kg. g = 9.8 m/s<sup>2</sup></b></p>
+  <li>
+    <ol>Find the potential energy of the cart at point A when it is 1498 m above the ground.</ol>
+    <ol>The cart approaches point B at a velocity of 196 m/s. Find the kinetic energy of the cart at point B.</ol>
+    <ol>Find the normal force at Point C (top of the loop de loop).</ol>
+  </li>
+</div>
+
+<div id="puzzle4" class="locked panel" style="display: none">
+  <p>After the cart finally leaves the rollercoaster-like track, it enters a horizontal track and slows to a rest.<br>
+  A defective roller coaster hits Anthony’s cart with a force of 300N and moves the cart off the track, 178 meters to the right. Find the work done.
+  </p>
+</div>
+
+
+
 <div id="continueBar">
   <button id="continue" onclick="next()">Continue</button>
 </div>

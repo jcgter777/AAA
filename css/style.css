@@ -77,6 +77,9 @@ h1 {
     animation: gradient 3s ease infinite;
 }
 
+#continue:active {
+	transform: translateY(3px);
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -125,7 +128,7 @@ h1 {
     color: black;
 }
 
-#ywEnvelope {
+.open {
   height: 300px;
 }
 

@@ -5,7 +5,11 @@ const divs = [
     "intro2",
     "puzzle1",
     "open1",
-    "puzzle2"
+    "puzzle2",
+    "open2",
+    "puzzle3",
+    "puzzle4",
+    
 ]
 
 document.addEventListener('keydown',typeInCells());
