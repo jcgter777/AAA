@@ -3,6 +3,9 @@ const panels = document.getElementById("allPanels").children
 
 document.addEventListener('keydown',typeInCells());
 
+for (let i = 1; i < panels.length; i++) {
+    panels[i].style.display = "none"
+}
 function next() {
     if (current == panels.length-1)
         return
