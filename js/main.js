@@ -100,6 +100,15 @@ function check(x) {
                 input3[currentQ].focus()
             }
         }
+    }
+}
+
+function checkWork(x) {
+    if (event.key === 'Enter') {
+        if (+x.value === 53400) {
+            document.getElementById("multiply2numbers").disabled = true
+            cont.style.display = "block"
+        }
 
     }
 }
