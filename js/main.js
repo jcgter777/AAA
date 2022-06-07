@@ -107,7 +107,7 @@ const ans4 = [1, 2]
 const input3 = document.getElementById("puzzle4").children
 const ans3 = [1, 2, 3]
 let currentQ = 0
-function check(x) {
+function checkV2(x) {
     if(event.key === 'Enter') {
 
         if (+x.value === ans4[currentQ]) {
