@@ -112,3 +112,8 @@ function checkWork(x) {
 
     }
 }
+
+function showHint(id, button) {
+    document.getElementById(id).style.display = "block"
+    button.style.display = "none"
+}
