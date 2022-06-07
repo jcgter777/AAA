@@ -103,6 +103,28 @@ function check(x) {
     }
 }
 
+const ans4 = [1, 2]
+const input3 = document.getElementById("puzzle4").children
+const ans3 = [1, 2, 3]
+let currentQ = 0
+function check(x) {
+    if(event.key === 'Enter') {
+
+        if (+x.value === ans4[currentQ]) {
+            if (currentQ===1) {
+                input4[1].disabled = true
+                cont.style.display = "block"
+            }
+            else {
+                input4[currentQ].style.display = "none"
+                currentQ++
+                input4[currentQ].style.display = "block"
+                input4[currentQ].focus()
+            }
+        }
+    }
+}
+
 function checkWork(x) {
     if (event.key === 'Enter') {
         if (+x.value === 53400) {
