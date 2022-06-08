@@ -82,15 +82,15 @@ function typeInCells(){
 }
 
 const input3 = document.getElementById("puzzle3").children
-const ans3 = [1, 2, 3]
-// const ans3 = [7193396, 9411920, 69420]
+const ans3 = [1, 2]
+// const ans3 = [7193396, 9411920]
 let currentQ = 0
 function check(x) {
     if(event.key === 'Enter') {
 
         if (+x.value === ans3[currentQ]) {
-            if (currentQ===2) {
-                input3[2].disabled = true
+            if (currentQ===1) {
+                input3[1].disabled = true
                 cont.style.display = "block"
             }
             else {
@@ -101,6 +101,26 @@ function check(x) {
             }
         }
     }
+}
+
+const input4 = document.getElementById("puzzle4").children
+const ans4 = [1,2]
+let currentQ2 = 0
+function checkV2(x){
+       if(event.key === 'Enter'){
+           if (+x.value === ans4[currentQ2]) {
+                if(currentQ2 === 1){
+                    input4[1].disabled = true
+                    cont.style.display = "block"
+                }
+               else{
+                   input4[currentQ2].style.display = "none"
+                    currentQ2++
+                    input4[currentQ2].style.display = "block"
+                    input4[currentQ2].focus()
+               }
+           }
+       }
 }
 
 
