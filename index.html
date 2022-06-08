@@ -115,12 +115,14 @@
     <img class="open" src="img/cottoncandy.png"/>
   </div>
 
-  <div class="locked panel">
-    <p>1.Input initial velocity</p>
-    <p>2.Angle of cannon</p>
-    <div id="puzzle4">
+  <div id="puzzle4" class="locked panel">
+    <div>
+      <p>1. Input initial velocity</p>
       <input class="input" type="number" placeholder="Enter Answer #1" onkeydown="checkV2(this)"/>
-      <input class="input" type="number" placeholder="Enter Answer #2" onkeydown="checkV2(this)" style="display: none"/>
+    </div>
+    <div style="display: none">
+      <p>2. Angle of cannon</p>
+      <input class="input" type="number" placeholder="Enter Answer #2" onkeydown="checkV2(this)"/>
     </div>
   </div>
 
