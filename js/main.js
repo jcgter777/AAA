@@ -117,7 +117,7 @@ function checkV2(x){
                     input4[currentQ2].style.display = "none"
                     currentQ2++
                     input4[currentQ2].style.display = "block"
-                    input4[currentQ2].focus()
+                    input4[currentQ2].children[1].focus()
                }
            }
        }
