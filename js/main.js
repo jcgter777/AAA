@@ -110,11 +110,11 @@ function checkV2(x){
        if(event.key === 'Enter'){
            if (+x.value === ans4[currentQ2]) {
                 if(currentQ2 === 1){
-                    input4[1].disabled = true
+                    input4[1].children[1].disabled = true
                     cont.style.display = "block"
                 }
                else{
-                   input4[currentQ2].style.display = "none"
+                    input4[currentQ2].style.display = "none"
                     currentQ2++
                     input4[currentQ2].style.display = "block"
                     input4[currentQ2].focus()
