@@ -99,6 +99,13 @@ function check(x) {
                 input3[currentQ].style.display = "block"
                 input3[currentQ].focus()
             }
+        } else {
+            console.log("anthony is smmart")
+            input3[currentQ].classList.add("shake")
+            setTimeout(function () {
+                input3[currentQ].classList.remove("shake")
+                input3[currentQ].style.transform = "translate3d(0, 0, 0)"
+            }, 500)
         }
     }
 }
@@ -119,16 +126,31 @@ function checkV2(x){
                     input4[currentQ2].style.display = "block"
                     input4[currentQ2].children[1].focus()
                }
-           }
+           } else {
+            console.log("anthony is smmart")
+            input4[currentQ2].classList.add("shake")
+            setTimeout(function () {
+                input4[currentQ2].classList.remove("shake")
+                input4[currentQ2].style.transform = "translate3d(0, 0, 0)"
+            }, 500)
+        }
        }
 }
 
 
 function checkWork(x) {
+    let mult = document.getElementById("multiply2numbers")
     if (event.key === 'Enter') {
         if (+x.value === 53400) {
-            document.getElementById("multiply2numbers").disabled = true
+            mult.disabled = true
             cont.style.display = "block"
+        } else {
+            console.log("anthony is smmart")
+            mult.classList.add("shake")
+            setTimeout(function () {
+                mult.classList.remove("shake")
+                mult.style.transform = "translate3d(0, 0, 0)"
+            }, 500)
         }
 
     }
