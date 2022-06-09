@@ -82,8 +82,8 @@ function typeInCells(){
 }
 
 const input3 = document.getElementById("puzzle3").children
-const ans3 = [1, 2]
-// const ans3 = [7193396, 9411920]
+// const ans3 = [1, 2]
+const ans3 = [7193396, 9411920]
 let currentQ = 0
 function check(x) {
     if(event.key === 'Enter') {
@@ -111,7 +111,8 @@ function check(x) {
 }
 
 const input4 = document.getElementById("puzzle4").children
-const ans4 = [1,2]
+// const ans4 = [1,2]
+const ans4 = [31, 60]
 let currentQ2 = 0
 function checkV2(x){
        if(event.key === 'Enter'){
